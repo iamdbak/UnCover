@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+body {
+  background-image: url('/img/pexels-photo-4397200.jpeg');
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Playfair Display', serif, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+/* .navbar{
+    font-size: 1.9rem;
+    background-color: transparent;
+  }
+
+.navbar-brand {
+    size: 0.9rem;
+    padding: 0 15px;
+    height: 80px;
+    line-height: 80px;
+  }
+
+  .menu_active {
+    font-weight: bold;
+
+  } */
+
+  .navbar {
+    background-color: #fff !important;
+  }
+  
+  .navbar-brand {
+    font-size: 1.9rem !important;
+    color: #F4B720 !important;
+  }
+  
+  .navbar a {
+    font-size: 1.3rem;
+    text-transform: capitalize;
+  }
+  
+  .menu_active {
+    font-weight: bold;
+    border-bottom: 1px solid #565387;
+  }
+  
+  .navbar a:hover {
+    color: #F4B720 !important;
+  }
+
+  
+  @media (max-width: 991px) {
+    .navbar-brand {
+      font-size: 1.5rem !important;
+    }
+  
+    .menu_active {
+      font-weight: bold;
+      border-bottom: none;
+    }
+  }
+  
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
