@@ -11,7 +11,7 @@ const Navbar = () => {
               <nav className="navbar navbar-expand-lg navbar-light bg-light">
                <div className = "container-fluid">
                   <NavLink className="navbar-brand" to="/"></NavLink>
-                     <img src={require('/Users/divyaraj/Desktop/Web Development/uncovergems/src/img/UncoverGemlogo230x61.png')} alt=""/>
+                     <img src={require('/Users/divyaraj/Desktop/Web Development/uncovergems/client/src/img/UncoverGemlogo230x61.png')} alt=""/>
                   <button 
                      className="navbar-toggler" 
                      type="button" 
@@ -31,10 +31,10 @@ const Navbar = () => {
                         <NavLink exact activeClassName='menu_active' className="nav-link" to="/">Home</NavLink>
                         </li>
                         <li className="nav-item">
-                        <NavLink exact activeClassName='menu_active' className="nav-link" to="/Login">Login</NavLink>
+                        <NavLink exact activeClassName='menu_active' className="nav-link" to="/User">Login</NavLink>
                         </li>
                         <li className="nav-item">
-                        <NavLink exact activeClassName='menu_active' className="nav-link" to="/Login">Contact Us</NavLink>
+                        <NavLink exact activeClassName='menu_active' className="nav-link" to="/ContactUs">Contact Us</NavLink>
                         </li>
                         {/* <li className="nav-item dropdown">
                         <NavLink className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
