@@ -36,6 +36,9 @@ const Navbar = () => {
                         <li className="nav-item">
                         <NavLink exact activeClassName='menu_active' className="nav-link" to="/ContactUs">Contact Us</NavLink>
                         </li>
+                        <li className="nav-item">
+                        <NavLink exact activeClassName='menu_active' className="nav-link" to="/Log">log</NavLink>
+                        </li>
                         {/* <li className="nav-item dropdown">
                         <NavLink className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                            Browse

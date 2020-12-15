@@ -1,12 +1,20 @@
-import React from "react";
+import React,{ Component }from "react";
 import loginImg from "../../login.svg";
 
-export class Register extends React.Component {
+ export class Register extends Component {
+  
+// const Register = props => {
+//  { onChange={(e) => { setUsernameReg (e.target.value);}}
+
+  //Trying to pass registration parameters
+  // const [usernameReg, setUsernameReg] = useState([]);
+  // const [passwordReg, setPasswordReg] = useState([]); 
+  
+  
   constructor(props) {
     super(props);
   }
-
-  render() {
+    render(){
     return (
       <div className="base-container" ref={this.props.containerRef}>
         <div className="header">Register</div>
@@ -17,7 +25,7 @@ export class Register extends React.Component {
           <div className="form">
             <div className="form-group">
               <label htmlFor="username">Username</label>
-              <input type="text" name="username" placeholder="username" />
+              <input type="text"   name="username" placeholder="username" />
             </div>
             <div className="form-group">
               <label htmlFor="email">Email</label>
@@ -25,7 +33,7 @@ export class Register extends React.Component {
             </div>
             <div className="form-group">
               <label htmlFor="password">Password</label>
-              <input type="text" name="password" placeholder="password" />
+              <input type="password" name="password" placeholder="password" />
             </div>
           </div>
         </div>
@@ -36,5 +44,5 @@ export class Register extends React.Component {
         </div>
       </div>
     );
-  }
+    }
 }

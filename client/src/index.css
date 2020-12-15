@@ -135,6 +135,18 @@ body {
   height: 75vh;
 }
 
+/*/////////////////////below the image home page styling */
+.wds-grid__row {
+  width: auto;
+  margin-left: -12px;
+  margin-right: -12px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+
+
 /* /// footer///////////////////// */
 
 footer p {

@@ -17,23 +17,26 @@ export class Footer extends React.Component{
    componentWillMount(){
       this.callAPI();
    }
-}
 
-   render()
-   {
-         return (
+   render(){
+         return(
             
             <>
+            <div>
             <footer className="w-100 bg-light text-center">
             <p>© 2020 LODA & LASAN . All Rights Reserved | Terms and Conditions</p>
             </footer>
-            {/* <p>{this.state.apiResponse}</p> */}
+            <p>{this.state.apiResponse}</p>
+            </div>
             </>
 
             
             
          );
    }
+}
+
+export default Footer;
 
 
 
