@@ -24,7 +24,7 @@ export class Footer extends React.Component{
             <>
             <div>
             <footer className="w-100 bg-light text-center">
-            <p>© 2020 LODA & LASAN . All Rights Reserved | Terms and Conditions</p>
+            <p>© 2020 UNCOVER GEMS . All Rights Reserved | Terms and Conditions</p>
             </footer>
             <p>{this.state.apiResponse}</p>
             </div>
