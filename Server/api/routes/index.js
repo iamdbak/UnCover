@@ -11,7 +11,8 @@ const mysql = require('mysql');
 // Trying to establish connection with the mySQL DataBase
 // const app = express();
 // app.use(express.json());
-// app.use(cors());
+// app.use(cors())
+// app.use(express.json());
 
 const connection = mysql.createConnection({
   host:"localhost",
@@ -32,7 +33,7 @@ connection.connect((err) => {
   })
 
 // passign values to the database 
-  router.post("/", (req, res) => {
+  router.post("/register", (req, res) => {
     const u = req.body.username;
     const p = req.body.password;
     connection.query(
@@ -43,5 +44,33 @@ connection.connect((err) => {
     }
     );
   });
+
+  router.post("/login", (req, res)=>{
+    console.log("Reched the route");
+    const u = req.body.username;
+    const p = req.body.password;
+    connection.query(
+      "SELECT * FROM userDB.login WHERE username = ? AND password = ?", 
+        [u, p],
+      (err, result) => {
+        if (err){
+
+          res.send({err: err});
+          console.log("Something went wrong with the route");
+        }
+        // else {
+          if (result.length > 0){
+            res.send(result);
+          }
+          else {
+            res.send({message:"no user found Sorry ! May be wrong username and password "});
+          }
+
+        // } ldcjosdj sawdd  :Lsc res.send ({message: " User Found Congratulations!"});
+        
+    }
+    );
+
+  })
 
 module.exports = router;

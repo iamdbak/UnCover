@@ -9,6 +9,7 @@ export class Footer extends React.Component{
    }
 
    callAPI(){
+      // in the p tag of the footer -> {this.state.apiResponse}
       fetch("http://localhost:9000/testAPI")
       .then(res=>res.text())
       .then(res=>this.setState({apiResponse: res}));
@@ -24,9 +25,9 @@ export class Footer extends React.Component{
             <>
             <div>
             <footer className="w-100 bg-light text-center">
-            <p>© 2020 LODA & LASAN . All Rights Reserved | Terms and Conditions</p>
+            <p>© 2020 UnCoverGem . All Rights Reserved | Terms and Conditions</p>
             </footer>
-            <p>{this.state.apiResponse}</p>
+            <p></p>
             </div>
             </>
 

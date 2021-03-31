@@ -39,23 +39,23 @@ const ContactUs = () => {
                   <form onSubmit={formSubmit}>
                      <div class="form-group">
                         <label for="exampleFormControlInput1">First Name</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" name="FirstName" value={data.FirstName} onChange={InputEvent} placeholder="Shah"/>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name="FirstName" value={data.FirstName} onChange={InputEvent} placeholder="First Name"/>
                      </div>
                      <div class="form-group">
                         <label for="exampleFormControlInput1">Last Name</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" name="LastName" value={data.LastName} onChange={InputEvent} placeholder="Rukh"/>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name="LastName" value={data.LastName} onChange={InputEvent} placeholder="Last Name"/>
                      </div>
                      <div class="form-group">
                         <label for="exampleFormControlInput1">Phone</label>
-                        <input type="numbers" class="form-control" id="exampleFormControlInput1" name="Phone" value={data.Phone} onChange={InputEvent} placeholder="415-619-6969"/>
+                        <input type="numbers" class="form-control" id="exampleFormControlInput1" name="Phone" value={data.Phone} onChange={InputEvent} placeholder="415-000-0007"/>
                      </div>
                      <div class="form-group">
                         <label for="exampleFormControlInput1">Email</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" name="email" value={data.email} onChange={InputEvent}  placeholder="ShahRukh@mannat.com"/>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" name="email" value={data.email} onChange={InputEvent}  placeholder="mail@example.com"/>
                      </div>
                      <div class="form-group">
                         <label for="exampleFormControlTextarea1">Your Message</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="msg" value={data.msg} onChange={InputEvent} placeholder="Hum ek bar jeete hai ek bar marte hai or code,haha code bhi ek hi bar likhenge or pap caaaarn nahi denge !"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="msg" value={data.msg} onChange={InputEvent} placeholder="Type in your message here ! "></textarea>
                      </div>
                      <div class="form-group">
                         <div class="form-check">
