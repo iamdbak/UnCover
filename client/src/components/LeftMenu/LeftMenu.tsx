@@ -41,6 +41,13 @@ const LeftMenu: React.FC = () => {
                     </Link>
                 </li>
 
+                <li className="nav-item">
+                    <Link className="nav-link" to={`/settings`}>
+                        <i className="fas fa-fw fa-settings"></i>
+                        <span>Settings</span>
+                    </Link>
+                </li>
+
                 <hr className="sidebar-divider" />
                 <div className="sidebar-heading">
                     Services
@@ -73,6 +80,8 @@ const LeftMenu: React.FC = () => {
                         <span>Users</span>
                     </Link>
                 </li>
+
+                
 
                 <hr className="sidebar-divider d-none d-md-block" />
             </ul>
