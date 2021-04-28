@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+/*Settings Header component*/
+
+.settingsheader {
+    background-color: #91BECC;
+    font-family: 'Roboto', sans-serif;
+}
+
+.settingsheader__accounttag > a {
+    margin-left: 5px;
+}
+
+.settingsheader__notificationstag > a {
+    margin-left: 5px;
+}
+
+.settingsheader__contacttag > a {
+    margin-left: 5px;
+}
+
+.settingsheader__privacytag > a {
+    margin-left: 5px;
+}
+
+.settingsheader__accounttag, .settingsheader__notificationstag, .settingsheader__contacttag, .settingsheader__privacytag {
+    display: inline-block;
+}

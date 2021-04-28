@@ -1,9 +1,12 @@
-import React, { Fragment } from "react"; 
+import React from "react";
 
+//components
+import SettingsHeader from "./SettingsHeader";  
+ 
 const Settings: React.FC = () => {
     return (
         <div className="settings">
-            <h1>Settings</h1>
+            <SettingsHeader />
         </div>
     );
 }
