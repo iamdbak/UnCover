@@ -1,0 +1,52 @@
+/*SetHeader*/
+
+.setheader { 
+    margin-top: 50px;
+    background-color: #E0DCE0;
+    color: black;
+}
+
+.setheader__account {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.setheader__account:hover {
+    color: rgb(74, 74, 255);
+    transition-duration: 0.5s;
+}
+
+.setheader__notifications {
+    margin-left: 400px;
+    cursor: pointer;
+}
+
+.setheader__notifications:hover {
+    color: rgb(74, 74, 255);
+    transition-duration: 0.5s;
+}
+
+.setheader__contact {
+    margin-left: 400px;
+    cursor: pointer;
+}
+
+.setheader__contact:hover {
+    color: rgb(74, 74, 255);
+    transition-duration: 0.5s;
+}
+
+.setheader__privacy {
+    margin-left: 400px;
+    cursor: pointer;
+}
+
+.setheader__privacy:hover {
+    color: rgb(74, 74, 255);
+    transition-duration: 0.5s;
+}
+
+.setheader__account, .setheader__notifications, .setheader__contact, .setheader__privacy {
+    display: inline-block;
+}
+
