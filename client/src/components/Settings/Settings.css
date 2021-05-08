@@ -1,52 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
 /*SetHeader*/
 
 .setheader { 
     margin-top: 50px;
-    background-color: #E0DCE0;
+    background-color: #ffcf73;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+.setheader:hover {
+    background-color: #f28e1c;
+    transition-duration: 0.5s;
+}
+
+.setheader > h3 {
+    padding-left: 1060px;
+    font-size: 55px;
+}
+
+
+/*AccountPage*/
+.accountpage {
     color: black;
+    background-color: white;
+    font-family: 'Heebo', sans-serif;
 }
 
-.setheader__account {
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-.setheader__account:hover {
-    color: rgb(74, 74, 255);
-    transition-duration: 0.5s;
-}
-
-.setheader__notifications {
-    margin-left: 400px;
-    cursor: pointer;
-}
-
-.setheader__notifications:hover {
-    color: rgb(74, 74, 255);
-    transition-duration: 0.5s;
-}
-
-.setheader__contact {
-    margin-left: 400px;
-    cursor: pointer;
-}
-
-.setheader__contact:hover {
-    color: rgb(74, 74, 255);
-    transition-duration: 0.5s;
-}
-
-.setheader__privacy {
-    margin-left: 400px;
-    cursor: pointer;
-}
-
-.setheader__privacy:hover {
-    color: rgb(74, 74, 255);
-    transition-duration: 0.5s;
-}
-
-.setheader__account, .setheader__notifications, .setheader__contact, .setheader__privacy {
+.accountpage__firstdiv, .accountpage__seconddiv {
     display: inline-block;
 }
 
+.accountpage__firstdiv {
+    margin-top: 100px;
+    margin-left: 900px;
+}
+
+
+.accountpage__seconddiv {
+    margin-left: 150px;
+}
+
+.accountpage__firstdiv > input {
+    background-color: rgb(232, 229, 229);
+    color: rgb(16, 16, 251);
+    height: 35px; 
+    width: 200px;
+    border: none;
+}
+
+.accountpage__seconddiv > input {
+    background-color: rgb(232, 229, 229);
+    color: rgb(16, 16, 251);
+    height: 35px; 
+    width: 200px;
+    border: none;
+}
+
+.accountpage__firstdiv > h3 {
+    margin-left: 30px;
+}
+
+.accountpage__seconddiv > h3 {
+    margin-left: 30px;
+}
+
+.accountpage__thirddiv, .accountpage__fourthdiv {
+    display: inline-block;
+}
+
+.accountpage__thirddiv {
+    margin-top: 50px;
+    margin-left: 900px;
+}
+
+.accountpage__thirddiv > input {
+    background-color: rgb(232, 229, 229);
+    color: rgb(16, 16, 251);
+    height: 35px; 
+    width: 200px;
+    border: none;
+}
+.accountpage__thirddiv > h3 {
+    margin-left: 30px;
+}
+
+.accountpage__fourthdiv {
+    margin-left: 150px;
+}
+
+.accountpage__fourthdiv > input {
+    background-color: rgb(232, 229, 229);
+    color: rgb(16, 16, 251);
+    height: 35px; 
+    width: 200px;
+    border: none;
+}
+
+.accountpage__fourthdiv > h3 {
+    margin-left: 30px;
+}
+
+.accountpage__fifthdiv {
+    margin-left: 1080px;
+    margin-top: 50px;
+}
+
+.accountpage__fifthdiv > h3 {
+    margin-left: 60px;
+}
+
+.accountpage__fifthdiv > input {
+    background-color: rgb(232, 229, 229);
+    color: rgb(16, 16, 251);
+    height: 35px; 
+    width: 200px;
+    border: none;
+}
+
+.accountpage__sixthdiv, .accountpage__seventhdiv {
+    display: inline-block; 
+}
+
+.accountpage__sixthdiv {
+    margin-left: 900px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.accountpage__seventhdiv {
+    margin-top: 30px;
+    margin-left: 300px;
+    margin-bottom: 10px;
+}
+
+.accountpage__sixthdiv > button {
+    border: none;
+    background-color: rgb(93, 248, 93);
+    color: black;
+    border-radius: 15px 15px 15px 15px;
+    font-size: 25px;
+}
+
+.accountpage__sixthdiv > button:hover {
+    background-color: rgb(155, 251, 155);
+    transition-duration: 0.5s;
+}
+
+.accountpage__seventhdiv > button {
+    border: none;
+    border-radius: 15px 15px 15px 15px;
+    font-size: 25px;
+}
+
+.accountpage__seventhdiv > button:hover {
+    background-color: rgb(184, 184, 184);
+    transition-duration: 0.5s;
+}
+
+/*Phone View*/
+@media screen and (max-width: 960px) {
+    /*SetHeader*/
+    .setheader { 
+        margin-top: 50px;
+        background-color: #ffcf73;
+        color: white;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    .setheader > h3 {
+        padding-left: 0px;
+    }
+
+    /*AccountPage*/
+    .accountpage {
+        color: black;
+        background-color: white;
+        font-family: 'Heebo', sans-serif;
+    }
+
+    .accountpage__firstdiv {
+        margin-top: 100px;
+        margin-left: 75px;
+    }
+
+    .accountpage__seconddiv {
+        margin-top: 50px;
+        margin-left: 75px;
+    }
+
+    .accountpage__thirddiv {
+        margin-top: 50px;
+        margin-left: 75px;
+    }
+
+    .accountpage__fourthdiv {
+        margin-top: 50px;
+        margin-left: 75px;
+    }
+
+    .accountpage__fifthdiv {
+        margin-top: 50px;
+        margin-left: 75px;
+    }
+
+    .accountpage__sixthdiv {
+        margin-top: 50px;
+        margin-left: 95px;
+    }
+
+    .accountpage__seventhdiv {
+        margin-top: 50px;
+        margin-left: 130px;
+    }
+
+
+
+
+}
+
+
+/*1920x1080 resolution*/
+@media  screen and (max-width: 1920px) {
+    /*SetHeader*/
+    .setheader { 
+        margin-top: 50px;
+        background-color: #ffcf73;
+        color: white;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    .setheader:hover {
+        background-color: #f28e1c;
+        transition-duration: 0.5s;
+    }
+
+    .setheader > h3 {
+        padding-left: 810px;
+    }
+
+    /*AccountPage*/
+    .accountpage__firstdiv {
+        margin-top: 100px;
+        margin-left: 650px;
+    }
+
+    .accountpage__thirddiv {
+        margin-top: 50px;
+        margin-left: 650px;
+    }
+
+    .accountpage__fifthdiv {
+        margin-top: 50px;
+        margin-left: 820px;
+    }
+
+    .accountpage__sixthdiv, .accountpage__seventhdiv {
+        display: inline-block;
+        margin-left: 505px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+   

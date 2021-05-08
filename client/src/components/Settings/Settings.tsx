@@ -3,10 +3,12 @@ import React from "react";
 
  //components 
  import SetHeader from "./SetHeader";
+ import AccountPage from "./AccountPage";
 const Settings: React.FC = () => {
     return (
         <div className="settings">
             <SetHeader />
+            <AccountPage />
         </div> 
     );
 }
