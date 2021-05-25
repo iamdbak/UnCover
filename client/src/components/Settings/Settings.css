@@ -25,7 +25,7 @@
 
 .body__imagebutton > button{
     margin-left: 10px;
-    cursor: pointer;
+    cursor: pointer;  
     border: none;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -102,4 +102,68 @@
     border-color: black;
     color: white; 
     transition-duration: 0.5s;
+}
+
+@media screen and (max-width: 960px) {
+    .settings__header > h1 {
+        padding-left: 50px;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        font-size: 65px;
+    }
+    .body__imagebutton > button{
+        margin-left: 40px;
+        cursor: pointer;  
+        border: none;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: #007bff;
+        color: white;  
+    }
+    .body__icon {
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+    .body__firstname, .body__lastname, .body__password, .body__email, .body__number {
+        margin-left: 40px;
+        margin-top: 50px;
+    }
+    .body__firstname > input, .body__lastname > input, .body__password > input, .body__email > input, .body__number > input {
+        height: 30px; 
+        width: 200px;
+    }
+    .body__savechangesbutton > button, .body__cancelchangesbutton > button {
+        padding-top: 5px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 5px;
+        margin-left: 25px;
+    }
+    
+}
+
+@media  screen and (min-width: 1920px) {
+    .settings__header > h1 {
+        padding-left: 770px;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        font-size: 65px;
+    }
+
+    .body__icon {
+        margin-top: 5px;
+        margin-left: 755px;
+    }
+
+    .body__firstname, .body__lastname, .body__password, .body__email, .body__number {
+        margin-left: 630px;
+        margin-top: 50px;
+    }
+
+    .body__savechangesbutton > button, .body__cancelchangesbutton > button {
+        padding-top: 5px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 5px;
+    }
 }
