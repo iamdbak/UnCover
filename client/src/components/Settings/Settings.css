@@ -142,7 +142,7 @@
     
 }
 
-@media  screen and (min-width: 1920px) {
+@media  screen and (min-width: 1920px) and (max-width: 1920px){
     .settings__header > h1 {
         padding-left: 770px;
         padding-top: 5px;
