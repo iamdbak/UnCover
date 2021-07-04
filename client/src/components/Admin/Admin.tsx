@@ -9,7 +9,6 @@ import Settings from "../Settings/Settings";
 import Quizzes from "../Quizzes/Quizzes"; 
 import Home from "../Homee/Homee";
 import Notifications from "../../common/components/Notification";
-//
 
 
 const Admin: React.FC = () => {

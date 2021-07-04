@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+
+.QuizComponent > firstTest {
+    background-color: #f6c23e;
+    color: white; 
+    font-family: 'Roboto', sans-serif;
+}

@@ -1,5 +1,5 @@
 import React, { useState, FormEvent, Dispatch } from "react";
-import { OnChangeModel } from "../../common/types/Form.types";
+import { OnChangeModel } from "../../common/typeComponents/FormTypes";
 import { useDispatch } from "react-redux";
 import { login } from "../../store/actions/account.actions";
 import TextInput from "../../common/components/TextInput";
