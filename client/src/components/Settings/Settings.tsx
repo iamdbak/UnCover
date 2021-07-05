@@ -1,47 +1,29 @@
 import React from "react";
- import "./Settings.css";
+import "./Settings.css";
 
  //components 
 const Settings: React.FC = () => {
     return (
         <div className="settings">
-            <div className="settings__header">
-                <h1>Settings</h1>
-            </div>
-            <div className="settings__body">
-                <div className="body__icon">
-                    <img src="https://icon-library.com/images/default-profile-icon/default-profile-icon-16.jpg" alt="default profile image" height="50px" width="50px"/>
+            <h1>Settings</h1>
+            <h3>Edit your Profile</h3>
+            <div className="settings__accountsettings">
+                <h1>Edit Profile</h1>
+                <div className="accountsettings__avatar">
+                    <h3>Avatar</h3>
+                    <img />
+                    <input type="file"/>
                 </div>
-                <div className="body__imagebutton">
-                    <button>Upload new photo</button>
+                <div className="settings__userinfo">
+                    <input type="text" id="firstName"/>
+                    <input type="text" id="lastName"/>
+                    <input type="text" id="userName"/>
+                    <input type="text" id="userEmail"/>
+                    <input type="password" id="userPassword"/>
+                    <input type="password" id="userConfirmPassword" placeholder="confirm password"/>
                 </div>
-                <div className="body__cancelbutton">
-                    <button>Reset</button>
-                </div>
-                <div className="body__firstname">
-                    <h2>First Name</h2>
-                    <input type="text"/>
-                </div>
-                <div className="body__lastname">
-                    <h2>Last Name</h2>
-                    <input type="text"/>
-                </div>
-                <div className="body__password">
-                    <h2>Password</h2>
-                    <input type="password"/>
-                </div>
-                <div className="body__email">
-                    <h2>Email</h2>
-                    <input type="text"/>
-                </div>
-                <div className="body__number">
-                    <h2>Phone Number</h2>
-                    <input type="text"/>
-                </div>
-                <div className="body__savechangesbutton">
+                <div className="settings__confirmsave">
                     <button>Save</button>
-                </div>
-                <div className="body__cancelchangesbutton">
                     <button>Cancel</button>
                 </div>
             </div>
