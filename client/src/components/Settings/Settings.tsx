@@ -5,16 +5,19 @@ import "./Settings.css";
 const Settings: React.FC = () => {
     return (
         <div className="settings">
-            <h1>Settings</h1>
-            <h3>Edit your Profile</h3>
+            <h1 className="h1 mb-2 text-gray-800">Settings</h1>
+            <h3 className="h3 mb-2 text-gray-800">Edit your Profile</h3>
             <div className="settings__accountsettings">
-                <h1>Edit Profile</h1>
+                <div className="accountsettings__header">
+                    <h4>Account Settings</h4>
+                </div>
                 <div className="accountsettings__avatar">
                     <h3>Avatar</h3>
-                    <img />
-                    <input type="file"/>
-                </div>
+                    <img src="https://th.bing.com/th/id/R.39eb0bbf2cc33ba02f53f8585004f820?rik=E0Gn4xMJk2ZerA&pid=ImgRaw" alt="default avatar image" height="50px" width="50px" />
+                    <input type="file" name="avatar_photo" placeholder="photo"  capture/>
+                </div> 
                 <div className="settings__userinfo">
+                    <h3>Your Information</h3>
                     <input type="text" id="firstName"/>
                     <input type="text" id="lastName"/>
                     <input type="text" id="userName"/>
@@ -23,8 +26,8 @@ const Settings: React.FC = () => {
                     <input type="password" id="userConfirmPassword" placeholder="confirm password"/>
                 </div>
                 <div className="settings__confirmsave">
-                    <button>Save</button>
-                    <button>Cancel</button>
+                    <button id="confirmsave__savbtn">Save</button>
+                    <button id="confirmsave__cancelbtn">Cancel</button>
                 </div>
             </div>
         </div> 

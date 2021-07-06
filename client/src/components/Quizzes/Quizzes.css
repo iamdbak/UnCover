@@ -1,8 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 .QuizComponent > firstTest {
     background-color: #f6c23e;
     color: white; 
     font-family: 'Roboto', sans-serif;
 }
+
+.quizzes__box {
+    background-color: #f6b366;
+    color: white;
+    cursor: pointer;
+    width: 195px;
+    height: 295px;
+    border: 1px solid rgb(71, 71, 71);
+    padding: 10px;
+    margin: auto;
+    margin-top: 20px;
+    border-style: solid;
+    border-color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.quizzes__box > h1 {
+    font-size: 25px;
+    padding-left: 20px;
+
+}
+
+.quizzes__box > p {
+    padding-top: 5px; 
+    padding-bottom: 5px;
+}
+

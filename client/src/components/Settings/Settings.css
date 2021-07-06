@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+.settings > h3 {
+    font-size: 20px;
+}
+
+.settings__accountsettings {
+    margin-top: 20px;
+    background-color: white;
+    color: rgb(82, 82, 82);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.accountsettings__header {
+    background-color: #e3e6f0;
+    border-color: black !important;
+}
+
+.accountsettings__header > h4 {
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: cadetblue !important;
+}
+
+.accountsettings__avatar > h3 {
+    padding-top: 30px; 
+    padding-left: 50px;
+    font-size: 25px;
+}
+
+.accountsettings__avatar > img {
+    border-radius: 50%;
+}
+
+.settings__userinfo > h3 {
+    font-size: 25px;
+    padding-top: 30px;
+    padding-left: 30px;
+}
