@@ -1,6 +1,6 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
-const mysql = require('mysql');
+const mysql = require("mysql");
 // var cors = require("cors");
 /* GET home page. */
 // router.get('/', function(req, res, next) {
@@ -15,62 +15,77 @@ const mysql = require('mysql');
 // app.use(express.json());
 
 const connection = mysql.createConnection({
-  host:"localhost",
+  host: "localhost",
   user: "root",
   password: "TestApp123",
   database: "userDB",
-  port:"3306"
+  port: "3306",
 });
 
-//cross checking if the connection was successful 
+//cross checking if the connection was successful
 connection.connect((err) => {
-    if(err){
-      throw err;
-    } 
-    else {
-      console.log("connected")
-    }
-  })
+  if (err) {
+    throw err;
+  } else {
+    console.log("connected");
+  }
+});
 
-// passign values to the database 
-  router.post("/register", (req, res) => {
-    const u = req.body.username;
-    const p = req.body.password;
-    connection.query(
-      "INSERT INTO userDB.login (username, password) VALUES (?,?)", 
-        [u, p],
-      (err, result) => {
-        console.log(err);
-    }
-    );
-  });
-
-  router.post("/login", (req, res)=>{
-    console.log("Reched the route");
-    const u = req.body.username;
-    const p = req.body.password;
-    connection.query(
-      "SELECT * FROM userDB.login WHERE username = ? AND password = ?", 
-        [u, p],
-      (err, result) => {
-        if (err){
-
-          res.send({err: err});
-          console.log("Something went wrong with the route");
+// passign values to the database
+router.post("/register", (req, res) => {
+  const u = req.body.username;
+  const p = req.body.password;
+  connection.query(
+    `SELECT * FROM userDB.login WHERE username = '${u}'`,
+    [u],
+    (err, result) => {
+      if (err) {
+        res.status(400).send({ error: "error" });
+      } else {
+        if (result.length === 0) {
+          connection.query(
+            "INSERT INTO userDB.login (username, password) VALUES (?,?)",
+            [u, p],
+            (err, result) => {
+              if (err) {
+                res.status(400).send({ error: "error" });
+              } else {
+                res.status(200).send({ detail: "Added successfully" });
+              }
+            }
+          );
+        } else {
+          res.status(400).send({ detail: "account already existed" });
         }
-        // else {
-          if (result.length > 0){
-            res.send(result);
-          }
-          else {
-            res.send({message:"no user found Sorry ! May be wrong username and password "});
-          }
-
-        // } ldcjosdj sawdd  :Lsc res.send ({message: " User Found Congratulations!"});
-        
+      }
     }
-    );
+  );
+});
 
-  })
+router.post("/login", (req, res) => {
+  console.log("Reched the route");
+  const u = req.body.username;
+  const p = req.body.password;
+  connection.query(
+    "SELECT * FROM userDB.login WHERE username = ? AND password = ?",
+    [u, p],
+    (err, result) => {
+      if (err) {
+        res.send({ err: err });
+        console.log("Something went wrong with the route");
+      }
+      // else {
+      if (result.length > 0) {
+        res.send(result);
+      } else {
+        res.send({
+          message: "no user found Sorry ! May be wrong username and password ",
+        });
+      }
+
+      // } ldcjosdj sawdd  :Lsc res.send ({message: " User Found Congratulations!"});
+    }
+  );
+});
 
 module.exports = router;

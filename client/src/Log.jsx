@@ -20,6 +20,8 @@ const Log = () => {
         username: usernameReg, password: passwordReg
       }).then((response)=>{
          console.log(response);
+      }).catch((err)=>{
+         console.log(err.response.data)
       });
   };
 

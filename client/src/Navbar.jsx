@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
 const Navbar = () => {
    return (
       <>
@@ -11,7 +10,7 @@ const Navbar = () => {
               <nav className="navbar navbar-expand-lg navbar-light bg-light">
                <div className = "container-fluid">
                   <NavLink className="navbar-brand" to="/"></NavLink>
-                     <img src={require('/Users/divyaraj/Desktop/Web Development/uncovergems/client/src/img/UncoverGemlogo230x61.png')} alt=""/>
+                     <img src={require('./img/UncoverGemlogo230x61.png')} alt=""/>
                   <button 
                      className="navbar-toggler" 
                      type="button" 
