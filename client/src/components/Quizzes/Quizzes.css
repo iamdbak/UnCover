@@ -1,31 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-
-.QuizComponent > firstTest {
-    background-color: #f6c23e;
-    color: white; 
-    font-family: 'Roboto', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
 
 .quizzes__box {
-    background-color: #f6b366;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /*background-color: #f3e8cd; */
+    background-color: #fdb15b;
     color: white;
     cursor: pointer;
     width: 195px;
     height: 295px;
-    border: 1px solid rgb(71, 71, 71);
+    border: 1px solid rgb(255, 255, 255);
     padding: 10px;
     margin: auto;
     margin-top: 20px;
     border-style: solid;
-    border-color: black;
-    font-family: 'Open Sans', sans-serif;
 }
 
 .quizzes__box > h1 {
-    font-size: 25px;
-    padding-left: 20px;
-
+    padding-top: 80px;
+    font-size: 30px;
+    font-family: 'Arvo', serif;
 }
 
 .quizzes__box > p {
@@ -33,3 +28,37 @@
     padding-bottom: 5px;
 }
 
+.line {
+    width: 200px; 
+    height: 2px; 
+    background: #fdb15b;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+.line::before {
+    content: ""; 
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    background: white;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 100%;
+    }
+
+    0% {
+        left: 0;
+    }
+}
