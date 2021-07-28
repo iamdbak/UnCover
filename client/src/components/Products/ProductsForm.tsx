@@ -8,7 +8,7 @@ import { addNotification } from "../../store/actions/notifications.action";
 import NumberInput from "../../common/components/NumberInput";
 import Checkbox from "../../common/components/Checkbox";
 import SelectInput from "../../common/components/Select";
-import { OnChangeModel, IProductFormState } from "../../common/types/Form.types";
+import { OnChangeModel, IProductFormState } from "../../common/typeComponents/FormTypes";
 
 const ProductForm: React.FC = () => {
   const dispatch: Dispatch<any> = useDispatch();

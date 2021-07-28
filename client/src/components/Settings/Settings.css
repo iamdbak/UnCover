@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+.settings > h3 {
+    font-size: 20px;
+}
+
+.settings__accountsettings {
+    margin-top: 20px;
+    background-color: white;
+    color: cadetblue;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.accountsettings__header {
+    background-color: #e3e6f0 !important; 
+    border-color: black !important;
+}
+
+.accountsettings__header > h4 {
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: cadetblue !important;
+}
+
+.accountsettings__profiledit > h4 {
+    padding-top: 5px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+}
+
+#avatar__useravatar {
+    height: 90px;
+    border-radius: 50%;
+    margin-left: 430px;
+    margin-bottom: 20px;
+}
+
+#avatar__file {
+    display: none;
+}
+
+
+#avatar__change {
+    cursor: pointer;
+    margin-left: 5px;
+    background-color: #f6c23e;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 5px 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#avatar__change:hover {
+    background-color: #f8da8f;
+    transition-duration: 0.5s;
+}
+
+#firstname__input, #lastname__input, #username__input, #username__password, #username__email{
+    border: 1px solid #b8a26c;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #f8cb5a;
+    color: white;
+    border-color: white;
+    width: 255px;
+}
+
+#firstname__input:focus, #lastname__input:focus, #username__input:focus, #username__password:focus, #username__email:focus{
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+.form__firstname > h3, .form__lastname > h3, .form__username > h3, .form__password > h3, .form__email > h3{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 20px;
+    color: cadetblue;
+}
+
+.form__firstname, .form__lastname {
+    display: inline-block;
+}
+
+.form__username, .form__password {
+    display: inline-block;
+}
+
+.form__firstname, .form__username{
+    margin-left: 220px;
+}
+
+.form__lastname, .form__password{
+    margin-left: 25px;
+}
+
+.form__username, .form__password {
+    margin-top: 20px;
+}
+
+.form__email {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 370px;
+}
+
+.form__save, .form__cancel {
+    display: inline-block;
+}
+
+#save__savebtn, #cancel__cancelbtn{
+    background-color: #f8cb5a;
+    color: white;
+    border: none;
+    width: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#save__savebtn {
+    margin-top: 10px;
+    margin-left: 215px;
+    margin-bottom: 10px;
+}
+
+#cancel__cancelbtn {
+    margin-top: 10px;
+    margin-left: 345px;
+    margin-bottom: 10px;
+}
+
+
+#save__savebtn:hover, #cancel__cancelbtn:hover{
+    background-color: #f7b81a;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 0.5s;
+}
+
+/*Mobile Devices(Portrait)*/
+@media (min-width: 320px) and (max-width: 480px) {
+    #avatar__useravatar {
+        margin-left: 115px;
+    }
+
+    .form__firstname, .form__username, .form__email{
+        margin-left: 25px;
+    }
+
+    #save__savebtn {
+        margin-left: 105px;
+    }
+
+    #cancel__cancelbtn {
+        margin-left: 105px;
+    }
+}
+
+/*tablts(portrait and landscape)*/
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+      #avatar__useravatar {
+          margin-left: 205px;
+      }
+
+      .form__firstname, .form__username, .form__email{
+        margin-left: 25px;
+    }
+    #save__savebtn {
+        margin-left: 105px;
+    }
+
+    #cancel__cancelbtn {
+        margin-left: 105px;
+    }
+}

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const LeftMenu: React.FC = () => {
 
     let [leftMenuVisibility, setLeftMenuVisibility] = useState(false);
-
+    
     function changeLeftMenuVisibility() {
         setLeftMenuVisibility(!leftMenuVisibility);
     }
@@ -41,20 +41,33 @@ const LeftMenu: React.FC = () => {
                     </Link>
                 </li>
 
+                <li className="nav-item">
+                    <Link className="nav-link" to={`/admin/settings`}>
+                        <i className="fas fa-fw fa-settings"></i>
+                        <span>Settings</span>
+                    </Link>
+                </li>
+                <li className="nav-item">
+                    <Link className="nav-link" to={`/admin/quizzes`}>
+                        <i className="fas fa-fw fa-quizzes"></i>
+                        <span>Quizzes</span>
+                    </Link>
+                </li>
+
                 <hr className="sidebar-divider" />
                 <div className="sidebar-heading">
                     Services
                 </div>
 
                 <li className="nav-item">
-                    <Link className="nav-link" to={`/products`}>
+                    <Link className="nav-link" to={`/admin/products`}>
                         <i className="fas fa-fw fa-warehouse"></i>
                         <span>Your Quizs</span>
                     </Link>
                 </li>
 
                 <li className="nav-item">
-                    <Link className="nav-link" to={`/orders`}>
+                    <Link className="nav-link" to={`/admin/orders`}>
                         <i className="fas fa-fw fa-dollar-sign"></i>
                         <span>Results</span>
                     </Link>
@@ -68,11 +81,13 @@ const LeftMenu: React.FC = () => {
 
 
                 <li className="nav-item">
-                    <Link className="nav-link" to={`/users`}>
+                    <Link className="nav-link" to={`/admin/users`}>
                         <i className="fas fa-fw fa-user"></i>
                         <span>Users</span>
                     </Link>
                 </li>
+
+                
 
                 <hr className="sidebar-divider d-none d-md-block" />
             </ul>
