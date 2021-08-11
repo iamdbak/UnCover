@@ -5,7 +5,7 @@ import { IStateType } from "../../store/models/root.interface";
 
 function TopMenuAccount(): JSX.Element {
   const dispatch: Dispatch<any> = useDispatch();
-  const email: string = useSelector((state: IStateType) => state.account.email);
+  const email: string = useSelector((state: IStateType) => state.account.username);
   const [isShow, setShow] = useState(false);
 
   return (

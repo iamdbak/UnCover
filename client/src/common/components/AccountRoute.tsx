@@ -14,7 +14,7 @@ export function AccountRoute({ children, ...rest }: RouteProps): JSX.Element {
         <Route
             {...rest}
             render={() =>
-                account.email ? (
+                account.username ? (
                     <Redirect
                         to={{
                             pathname: "/admin"

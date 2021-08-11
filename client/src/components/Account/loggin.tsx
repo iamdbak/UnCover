@@ -18,8 +18,8 @@ const Login: React.FC = () => {
 
   function submit(e: FormEvent<HTMLFormElement>): void {
     e.preventDefault();
-    if(isFormInvalid()) { return; }
-    dispatch(login(formState.email.value));
+    if (isFormInvalid()) { return; }
+    dispatch(login(formState.email.value, formState.password.value));
   }
 
   function isFormInvalid() {
