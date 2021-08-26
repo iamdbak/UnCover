@@ -14,7 +14,7 @@ export function PrivateRoute({ children, ...rest }: RouteProps): JSX.Element {
         <Route
             {...rest}
             render={() =>
-                account.email ? (
+                account.username ? (
                     children
                 ) : <Login/>
             }

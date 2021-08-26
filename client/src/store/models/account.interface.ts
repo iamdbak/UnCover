@@ -1,3 +1,5 @@
 export interface IAccount {
-   email: string;
+   loading: boolean;
+   username: string;
+   error: string | null;
 }
