@@ -93,10 +93,11 @@ router.post("/login", (req, res) => {
           }
           else{
             console.log("no user found Sorry ! May be wrong username and password ");
+            res.status(400).send({message: "no user found Sorry ! May be wrong username and password "})
           }
         })
       } else {
-        res.send({
+        res.status(400).send({
           message: "no user found Sorry ! May be wrong username and password ",
         });
       }

@@ -34,9 +34,9 @@ export const login = (email: string, password: string) => {
             )
             dispatch({
                 type: ActionType.LOG_IN_SUCCESS,
-                username: data[0].username
+                username: data.username
             })
-            localStorage.setItem("username", JSON.stringify(data[0].username));
+            localStorage.setItem("username", JSON.stringify(data.username));
         } catch (error) {
             dispatch({
                 type: ActionType.LOG_IN_FAIL,
