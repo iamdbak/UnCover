@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router();
 const mysql = require("mysql");
+const bcrypt = require("bcrypt")
 // var cors = require("cors");
 /* GET home page. */
 // router.get('/', function(req, res, next) {
@@ -34,7 +35,7 @@ connection.connect((err) => {
 // passign values to the database
 router.post("/register", (req, res) => {
   const u = req.body.username;
-  const p = req.body.password;
+  var p = req.body.password;
   connection.query(
     `SELECT * FROM userDB.login WHERE username = '${u}'`,
     [u],
@@ -43,17 +44,26 @@ router.post("/register", (req, res) => {
         res.status(400).send({ error: "error" });
       } else {
         if (result.length === 0) {
-          connection.query(
-            "INSERT INTO userDB.login (username, password) VALUES (?,?)",
-            [u, p],
-            (err, result) => {
-              if (err) {
-                res.status(400).send({ error: "error" });
-              } else {
-                res.status(200).send({ detail: "Added successfully" });
+          bcrypt.genSalt(10, (err, salt)=>{
+            bcrypt.hash(p, salt, (err, hash)=>{
+              if(err){
+                console.log(err)
               }
-            }
-          );
+              else{
+                p = hash
+                connection.query(
+                  "INSERT INTO userDB.login (username, password) VALUES (?,?)",
+                [u, p],
+                (err, result) => {
+                  if (err) {
+                    res.status(400).send({ error: "error" });
+                  } else {
+                    res.status(200).send({ detail: "Added successfully" });
+                  }
+                });
+              }
+            })
+          })
         } else {
           res.status(400).send({ detail: "account already existed" });
         }
@@ -67,8 +77,8 @@ router.post("/login", (req, res) => {
   const u = req.body.username;
   const p = req.body.password;
   connection.query(
-    "SELECT * FROM userDB.login WHERE username = ? AND password = ?",
-    [u, p],
+    "SELECT * FROM userDB.login WHERE username = ?",
+    [u],
     (err, result) => {
       if (err) {
         res.send({ err: err });
@@ -76,9 +86,18 @@ router.post("/login", (req, res) => {
       }
       // else {
       if (result.length > 0) {
-        res.send(result);
+        bcrypt.compare(p, result[0].password, function(err, resultCheck) {
+          if(resultCheck){
+            console.log("success")
+            res.send(result[0]);
+          }
+          else{
+            console.log("no user found Sorry ! May be wrong username and password ");
+            res.status(400).send({message: "no user found Sorry ! May be wrong username and password "})
+          }
+        })
       } else {
-        res.send({
+        res.status(400).send({
           message: "no user found Sorry ! May be wrong username and password ",
         });
       }

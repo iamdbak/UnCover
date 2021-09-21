@@ -1,20 +1,35 @@
-import React,{ Component }from "react";
+import React, { Component } from "react";
 import loginImg from "../../login.svg";
+import Axios from "axios"
+export class Register extends Component {
 
- export class Register extends Component {
-  
-// const Register = props => {
-//  { onChange={(e) => { setUsernameReg (e.target.value);}}
+  // const Register = props => {
+  //  { onChange={(e) => { setUsernameReg (e.target.value);}}
 
   //Trying to pass registration parameters
   // const [usernameReg, setUsernameReg] = useState([]);
   // const [passwordReg, setPasswordReg] = useState([]); 
-  
-  
+  state = { username: "", password: "" }
+  setUserName = event => {
+    this.setState({ username: event.target.value })
+  }
+  setPassword = event => {
+    this.setState({ password: event.target.value })
+  }
+  onSubmit = event => {
+    const { username, password } = this.state
+    Axios.post("http://localhost:9000/index/register",
+      { username: username, password: password }
+    ).then((res) => {
+      console.log(res.data)
+    }).catch((err) => {
+      console.log(err)
+    })
+  }
   constructor(props) {
     super(props);
   }
-    render(){
+  render() {
     return (
       <div className="base-container" ref={this.props.containerRef}>
         <div className="header">Register</div>
@@ -25,7 +40,7 @@ import loginImg from "../../login.svg";
           <div className="form">
             <div className="form-group">
               <label htmlFor="username">Username</label>
-              <input type="text"   name="username" placeholder="username" />
+              <input type="text" name="username" placeholder="username" onChange={this.setUserName} />
             </div>
             <div className="form-group">
               <label htmlFor="email">Email</label>
@@ -33,16 +48,16 @@ import loginImg from "../../login.svg";
             </div>
             <div className="form-group">
               <label htmlFor="password">Password</label>
-              <input type="password" name="password" placeholder="password" />
+              <input type="password" name="password" placeholder="password" onChange={this.setPassword} />
             </div>
           </div>
         </div>
         <div className="footer">
-          <button type="button" className="btn">
+          <button type="button" className="btn" onClick={this.onSubmit}>
             Register
           </button>
         </div>
       </div>
     );
-    }
+  }
 }

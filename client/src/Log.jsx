@@ -1,18 +1,19 @@
-import React,{useState} from 'react';
-import Axios from 'axios';
+import React,{useState, Dispatch} from 'react';
+import {useDispatch, useSelector} from "react-redux"
+import Axios from "axios";
 import { Redirect } from 'react-router';
-
-
+import { bindActionCreators } from 'redux';
+import { login } from "./store/actions/account.actions"
 const Log = () => {
    //For Registering user 
-  const [usernameReg, setUsernameReg] = useState([]);
-  const [passwordReg, setPasswordReg] = useState([]);
+   const [usernameReg, setUsernameReg] = useState([]);
+   const [passwordReg, setPasswordReg] = useState([]);
 
-  const [username, setUsername] = useState([]);
-  const [password, setPassword] = useState([]);
+   const [username, setUsername] = useState([]);   
+   const [password, setPassword] = useState([]);
 
 
-  var [LoginStatus, setLoginStatus] = useState([]);
+   var [LoginStatus, setLoginStatus] = useState([]);
 
   const register=()=> {
      Axios.post("http://localhost:9000/index/register",
@@ -24,7 +25,6 @@ const Log = () => {
          console.log(err.response.data)
       });
   };
-
   const login = () => {
      Axios.post("http://localhost:9000/index/login",
      {
@@ -40,7 +40,9 @@ const Log = () => {
         
      });
   };
-
+  const submitHandler = (e) =>{
+   e.preventDefault();
+  }
 
 
    return(
